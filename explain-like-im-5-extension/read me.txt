@@ -1,0 +1,28 @@
+Explain Like I'm 5yo Chrome Extension
+
+Overview
+This extension replaces selected text with a child-friendly explanation using a mock fallback, as the OpenAI API quota is exceeded.
+
+Installation
+1. Download the explain-like-im-5yo-extension folder.
+2. Open chrome://extensions/ in Chrome.
+3. Enable "Developer mode".
+4. Click "Load unpacked" and select the folder.
+5. Set your OpenAI API key via the context menu (right-click, select text, choose "Set API Key").
+
+API Setup
+- Get an API key from https://platform.openai.com/api-keys
+		-> Click on "Create new secret key"
+		-> Then copy and paste that api key in your "api key" file(making sure not to share the api key to anyone).
+- Now getting back on any webpage, Right-click any where on the webapage, select "Set API Key," and paste your key (note: free tier quota may be exhausted after 200 request per day).
+
+Usage
+- Select text, right-click, choose "Explain to a 5yo" to replace it with a simplified version.
+
+Troubleshooting
+- Network Errors: Check internet connection.
+- Rate Limits: Mock fallback activates if 429 error occurs.
+- No Replacement: Ensure text is selected before right-clicking.
+
+Thanks Alot
+-Vikas

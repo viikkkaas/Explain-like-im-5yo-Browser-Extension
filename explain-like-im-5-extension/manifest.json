@@ -1,0 +1,41 @@
+{
+       "manifest_version": 3,
+       "name": "Explain Like I'm 5yo",
+       "version": "1.0",
+       "description": "Replaces selected text with a child-friendly explanation using OpenAI API in real-time.",
+       "permissions": [
+         "contextMenus",
+         "activeTab",
+         "scripting",
+         "storage"
+       ],
+       "host_permissions": [
+         "https://api.openai.com/*",
+         "<all_urls>"
+       ],
+       "background": {
+         "service_worker": "background.js"
+       },
+       "content_scripts": [
+         {
+           "matches": ["<all_urls>"],
+           "js": ["content.js"]
+         }
+       ],
+       "action": {
+         "default_icon": {
+           "48": "48pxlogo.png",
+           "128": "128pxlogo.png"
+         }
+       },
+       "icons": {
+          "48": "48pxlogo.png",
+          "128": "128pxlogo.png"
+       },
+       "web_accessible_resources": [
+         {
+           "resources": ["styles.css"],
+           "matches": ["<all_urls>"]
+         }
+       ]
+     }
